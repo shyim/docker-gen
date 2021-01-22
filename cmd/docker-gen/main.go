@@ -17,7 +17,7 @@ type stringslice []string
 
 var (
 	buildVersion            string
-	version                 bool
+	showVersion             bool
 	watch                   bool
 	wait                    string
 	notifyCmd               string
@@ -85,7 +85,7 @@ func initFlags() {
 	if certPath == "" {
 		certPath = filepath.Join(os.Getenv("HOME"), ".docker")
 	}
-	flag.BoolVar(&version, "version", false, "show version")
+	flag.BoolVar(&showVersion, "showVersion", false, "show showVersion")
 	flag.BoolVar(&watch, "watch", false, "watch for container changes")
 	flag.StringVar(&wait, "wait", "", "minimum and maximum durations to wait (e.g. \"500ms:2s\") before triggering generate")
 	flag.BoolVar(&onlyExposed, "only-exposed", false, "only include containers with exposed ports")
@@ -113,7 +113,7 @@ func initFlags() {
 func main() {
 	initFlags()
 
-	if version {
+	if showVersion {
 		fmt.Println(buildVersion)
 		return
 	}

@@ -1,9 +1,9 @@
 docker-gen
 =====
 
-![latest 0.7.3](https://img.shields.io/badge/latest-0.7.3-green.svg?style=flat)
-[![Build Status](https://travis-ci.org/jwilder/docker-gen.svg?branch=master)](https://travis-ci.org/jwilder/docker-gen)
 ![License MIT](https://img.shields.io/badge/license-MIT-blue.svg?style=flat)
+
+# This is a fork of jwilder/docker-gen but made compatible for newest Docker / Podman (using podman service) version.
 
 `docker-gen` is a file generator that renders templates using docker container meta-data.
 
